@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="two alt-two">
+        <h1>From the pixels on this screen to the beats of my heart
+            <span>welcome to a webpage where our journey starts, <br> Will you click 'Yes' and make my dream come
+                true?</span>
+        </h1>
+    </div>
+    <button id="open-btn">YES</button>
+    <dialog close id="first-modal">
+        <div id="first-modal-div">
+            <h1>Please Don't Be Creeped out</h1>
+            <p>I Know this might be all of a sudden, <br> And this is not a proposal but a Confession</p>
+            <form method="dialog">
+                <button id="close-btn" onclick="secondmodalOpen()">Hao Ki Achi Baat</button>
+            </form>
+        </div>
+    </dialog>
+    <dialog close id="second-modal">
+        <center>
+            <div id="content">
+                <img src="assets/Untitled design (1).png" alt="">
+                <div>
+                    <h2>Heart Felt emotions</h2>
+                    <p>"Aankhein hi dekh kar Fana hogaye aapki,<br>Pardaa na kiya hota toh paarda kar gaye hotay"</p>
+                    <form method="dialog">
+                        <button id="close-btn" onclick="thirdmodalOpen()">Hao Ki Achi Baat</button>
+                    </form>
+                </div>
+            </div>
+        </center>
+    </dialog>
+    <dialog close id="third-modal">
+        <center>
+            <div id="content">
+                <img src="assets/Untitled design.png" alt="">
+                <div>
+                    <h2>In case you didn't underestand</h2>
+                    <p>"Just by having a glimpse of your beautiful eyes, I would have been Annihilated <br>
+                        if not for your veil, My existence would had been veiled from reality."</p>
+                    <form method="dialog">
+                        <button id="close-btn" onclick="fourthmodalOpen()">Hao Ki Achi Baat</button>
+                    </form>
+                </div>
+            </div>
+        </center>
+    </dialog>
+    <dialog close id="fourth-modal">
+        <div id="first-modal-div">
+            <h1>Its' just my Confession</h1>
+            <p>By no rights or authority, <br> Do I want this feeling to be mutal, <br>
+                I don't expect any feelings from your side but if you do, you already know you are AMAZING</p>
+            <form method="dialog">
+                <button id="close-btn" onclick="nav()">Hao Ki Achi Baat</button>
+            </form>
+        </div>
+    </dialog>
+
+
+    <script>
+
+        document.getElementById("open-btn").addEventListener("click", () => {
+            document.getElementById("first-modal").showModal()
+        })
+
+        function secondmodalOpen() {
+            document.getElementById("second-modal").showModal()
+        }
+        function nav() {
+            window.location.href = 'mainPage.html'
+        }
+        function thirdmodalOpen() {
+            document.getElementById("third-modal").showModal()
+        }
+        function fourthmodalOpen(){
+            document.getElementById("fourth-modal").showModal()
+        }
+
+    </script>
+</body>
+
+</html>

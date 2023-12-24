@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Confession</title>
+    <style>
+        #myButton {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transition: all 0.3s ease;
+        }
+        #yes-btn{
+            position: absolute;
+            top: 70%;
+            left: 30%;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="two alt-two">
+        <h1>Would you regard me as deserving of you?</h1>
+        <center><img style="height:40%; width:30%" src="assets/gifs/giphy.gif" alt="">
+            <a href="happy.html"><button id="yes-btn">Yes</button></a>
+            <button id="myButton" onmouseover="changePosition()" ontouchstart="changePosition()">No</button>
+        </center>
+
+    </div>
+
+    <!-- <iframe src="https://giphy.com/embed/kfRKF0iqA8jyDqq1nH" width="480" height="452" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/love-hearts-milk-kfRKF0iqA8jyDqq1nH">via GIPHY</a></p> -->
+    <!-- <iframe src="https://giphy.com/embed/7TJXK0wFlYVeJYk3yH" width="423" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/love-happy-heart-7TJXK0wFlYVeJYk3yH">via GIPHY</a></p> -->
+    <script>
+        const button = document.getElementById('myButton');
+        let count = 0
+
+        function changePosition() {
+            const randomTop = Math.floor(Math.random() * 80) + 10; // Adjust range as needed
+            const randomLeft = Math.floor(Math.random() * 80) + 10;
+
+            button.style.top = `${randomTop}%`;
+            button.style.left = `${randomLeft}%`;
+            count += 1
+            // console.log(count)
+            if (count >= 7) {
+                alert("I respect Your Decision😊")
+            }
+        }
+        
+
+
+    </script>
+</body>
+
+</html>
